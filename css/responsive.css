@@ -1,0 +1,15 @@
+
+/*This Media Query use for Mobile View*/
+@media screen and (max-width: 767px){
+	.header{ padding: 15px 0; }
+	.logo{ width: 100px; display: block; }
+	.banner{ padding-top: 80px; }
+  .banner h1{ font-size: 50px; }	
+  .about_box{
+  	padding: 25px;
+  }
+  .service_box figure{ float: none; width: auto; margin:0 0 20px; }
+
+}
+
+

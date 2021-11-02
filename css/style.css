@@ -1,0 +1,261 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: arial;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+
+/*header*/
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 30px;
+    background: rgba(7, 75, 75, 0.8);
+}
+
+.block-row {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 30px 10px;
+    justify-content: center;
+    background-position: center center;
+    /*background-size: cover;*/
+}
+
+.nav_icon {
+    color: #fff;
+    font-size: 35px;
+    vertical-align: middle;
+    line-height: 1
+}
+
+.main_menu {
+    position: fixed;
+    right: 0;
+    top: -10px;
+    padding-top: 82px;
+    z-index: 10;
+    overflow: hidden;
+    height: 0;
+    width: 250px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main_menu.active {
+    height: 100vh;
+}
+
+.main_menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
+.main_menu ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 25px;
+    border-bottom: 1px solid rgba(7, 75, 75, 0.8);
+    color: #000;
+    background: #fff;
+}
+
+.main_menu ul li a:hover {
+    background: rgba(7, 75, 75, 0.8);
+    color: #fff;
+}
+
+.menu_bg {
+    background: #fff;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main_menu.active .menu_bg {
+    transform: scale(120);
+}
+
+
+/*banner*/
+
+.banner {
+    text-align: center;
+    color: #fff;
+    font-size: 60px;
+}
+
+.banner h1 {
+    font-size: 120px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+/*about*/
+
+.about_box {
+    background: rgba(253, 253, 255, 0.85);
+    border-radius: 15px;
+    padding: 50px;
+}
+
+
+/*services*/
+
+.services {
+    background-blend-mode: darken;
+    background-color: rgba(7, 75, 75, 0.5)
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+
+.services h3 {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.service_box {
+    min-height: calc(100% - 40px);
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.service_box figure {
+    width: 40%;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.service_box figure img {
+    border-radius: 5px;
+}
+
+.service_box .description {
+    overflow: hidden;
+    color: #000;
+}
+
+.service_box .description p {
+    margin-bottom: 0;
+}
+
+#tirosMetidos {
+    width: 40%;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    margin-right: 10%;
+}
+
+#tirosTotales {
+    width: 40%;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+/* Tabla */
+
+#listaTabla,
+th,
+td {
+    border: 1px black solid;
+    padding: 10px;
+}
+
+
+/*contact*/
+
+.contact h2 {
+    font-size: 40px;
+    color: #fff;
+}
+
+.container_box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(7, 75, 75, 0.5);
+    border-radius: 15px;
+}
+
+.container_box input:not([type="submit"]),
+.container_box textarea {
+    width: 100%;
+    height: 40px;
+    resize: none;
+    margin-bottom: 15px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(7, 75, 75, 1);
+}
+
+.container_box textarea {
+    height: 100px;
+}
+
+.container_box input[type="submit"] {
+    width: 150px;
+    background: rgba(7, 75, 75, 1);
+    border: 0;
+    color: #fff;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+/*footer*/
+
+.footer {
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+    background: #062323;
+}
