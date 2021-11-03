@@ -202,6 +202,10 @@ h2 {
 
 /* Tabla */
 
+#section4 {
+    display: flex;
+}
+
 #listaTabla,
 th,
 td {

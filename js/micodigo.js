@@ -55,18 +55,18 @@ const campoApellido = document.getElementById("apellidoF")
 const campoTelefono = document.getElementById("telefonoF");
 
 function validarFormulario(ev) {
-    if ((campoNombre.value == "") || (campoApellido.value == "") || (isNaN(campoTelefono.value))) {
+    if ((campoNombre.value == "") || (campoApellido.value == "") || (isNaN(campoTelefono.value)) || (campoTelefono.value == "")) {
         ev.preventDefault();
-        swal.fire(
+        Swal.fire(
+            "Error, revise los datos",
+            "Intente de nuevo " + campoNombre.value,
+            "error");
+    } else {
+        ev.preventDefault();
+        Swal.fire(
             "Exito, formulario enviado",
             "Gracias " + campoNombre.value,
             "success");
-    } else {
-        /* swal.fire(
-            "Exito, formulario enviado",
-            "Gracias" + campoNombre.value,
-            "success") */
-        ;
     }
 }
 
