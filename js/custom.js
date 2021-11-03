@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $('.block-row').parallax();
-
-
+    $("#miSeleccion").change(function() {
+        ordernar;
+    })
 })
 
 nav_icon = document.getElementById('nav_icon');
