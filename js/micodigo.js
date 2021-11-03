@@ -54,8 +54,8 @@ const campoNombre = document.getElementById("nombreF");
 const campoApellido = document.getElementById("apellidoF")
 const campoTelefono = document.getElementById("telefonoF");
 
-function validarFormulario(ev) {
-    if ((campoNombre.value == "") || (campoApellido.value == "") || (isNaN(campoTelefono.value)) || (campoTelefono.value == "")) {
+/* function validarFormulario(ev) {
+    if ((campoNombre.value == "") || (campoApellido.value == "") || (isNaN(campoTelefono.value))) {
         ev.preventDefault();
         Swal.fire(
             "Error, revise los datos",
@@ -68,7 +68,7 @@ function validarFormulario(ev) {
             "Gracias " + campoNombre.value,
             "success");
     }
-}
+} */
 
 
 
