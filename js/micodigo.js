@@ -8,11 +8,11 @@ document.getElementById('bienvido_jugador').innerHTML = ("Bienvenido " + nombreU
 
 //Array tabla
 var tabla = [{
-    posicion: "Alero",
-    tipo: "Euro-Step",
-    metido: "1",
-    tirad: "3",
-    porcetaje: "%20",
+    posicion: "",
+    tipo: "",
+    metido: "",
+    tirad: "",
+    porcetaje: "",
 }]
 
 
@@ -32,16 +32,24 @@ function nuevoLanzamiento(event) {
     var posicionL = document.getElementById("position").value;
     var metidos1 = document.getElementById("tirosMetidos").value;
     var tirados1 = document.getElementById("tirosTotales").value;
-    var lanzamientonuevo = { tipo: tipoL, posicion: posicionL, metido: metidos1, tirad: tirados1, porcetaje: "porcentaje" }
+    //Porcentaje del lanzamiento con return
+    function datosTiros(metidos, tirados) {
+        var porcentajeLanzamiento
+        porcentajeLanzamiento = (metidos / tirados) * 100;
+        return porcentajeLanzamiento.toFixed()
+    }
+    var lanzamientonuevo = { tipo: tipoL, posicion: posicionL, metido: metidos1, tirad: tirados1, porcetaje: datosTiros(metidos1, tirados1) }
     tabla.push(lanzamientonuevo);
     //Aca lleno la tabla
     var cuerpoTabla = document.getElementById("datos-lanzamiento");
     var tableLlena = "";
 
     for (var i = 0; i < tabla.length; i++) {
-        tableLlena += "<tr><td>" + tabla[i].posicion + "</td><td>" + tabla[i].tipo + "</td><td>" + tabla[i].metido + "</td><td>" + tabla[i].tirad + "</td><td>" + tabla[i].porcetaje + "</td></tr>";
+        tableLlena += "<tr><td>" + tabla[i].posicion + "</td><td>" + tabla[i].tipo + "</td><td>" + tabla[i].metido + "</td><td>" + tabla[i].tirad + "</td><td>" +
+            tabla[i].porcetaje + "</td></tr>";
     }
     cuerpoTabla.innerHTML = tableLlena;
+    localStorage.setItem("miLanzamiento", JSON.stringify(tabla));
 }
 
 
