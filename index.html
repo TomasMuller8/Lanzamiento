@@ -53,6 +53,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -90,8 +92,8 @@
                     </div>
                     <input id="tirosMetidos" type="number" placeholder="Metidos" name="cargaPositiva">
                     <input id="tirosTotales" type="number" placeholder="Tiros Totales" name="cargaTotal">
-                    <div>
-                        <input class="btn btn-primary" type="submit" value="Submit" id="btnCalcular"></div>
+                    <div class="botonEnviar">
+                        <input class="btn btn-primary" type="submit" value="Cargar lanzamiento" id="btnCalcular"></div>
                 </form>
             </div>
 
@@ -101,7 +103,7 @@
 
     <div class="block-row contact" id="section4" data-parallax="scroll" data-image-src="images/bg12.jpg">
 
-        <table id="listaTabla">
+        <table id="listaTabla" class="table table-dark table-striped">
             <tr>
                 <th>Posicion</th>
                 <th>Tipo lanzamiento</th>
@@ -131,7 +133,7 @@
                             <input type="email" name="" placeholder="Email">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="" id="telefonoF" placeholder="Telefono">
+                            <input type="number" name="" id="telefonoF" placeholder="Telefono">
                         </div>
 
                         <div class="col-md-12">
@@ -147,13 +149,14 @@
     </div>
     <footer class="footer ">
         &copy; SmallBall
+        <div id="map"></div>
     </footer>
     <script type="text/javascript " src="js/jquery-3.6.0.min.js "></script>
-    <!--     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js "></script>
     <script type="text/javascript " src="js/custom.js "></script>
     <script src="js/micodigo.js "></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 </body>
 
 </html>

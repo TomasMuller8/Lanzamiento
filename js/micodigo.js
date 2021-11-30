@@ -45,7 +45,7 @@ function nuevoLanzamiento(event) {
     var tableLlena = "";
 
     for (var i = 0; i < tabla.length; i++) {
-        tableLlena += "<tr><td>" + tabla[i].posicion + "</td><td>" + tabla[i].tipo + "</td><td>" + tabla[i].metido + "</td><td>" + tabla[i].tirad + "</td><td>" +
+        tableLlena += "<tr><td>" + tabla[i].posicion + "</td><td>" + tabla[i].tipo + "</td><td>" + tabla[i].metido + "</td><td>" + tabla[i].tirad + "</td><td>" + '% ' +
             tabla[i].porcetaje + "</td></tr>";
     }
     cuerpoTabla.innerHTML = tableLlena;
@@ -53,7 +53,7 @@ function nuevoLanzamiento(event) {
 }
 
 
-//Fomulario de contacto // Sacar alert y agregar un p que este oculto por defecto.
+//Fomulario de contacto //
 const contactoFormulario = document.getElementById("formContacto");
 contactoFormulario.addEventListener("submit", validarFormulario)
 
@@ -62,7 +62,7 @@ const campoNombre = document.getElementById("nombreF");
 const campoApellido = document.getElementById("apellidoF")
 const campoTelefono = document.getElementById("telefonoF");
 
-/* function validarFormulario(ev) {
+function validarFormulario(ev) {
     if ((campoNombre.value == "") || (campoApellido.value == "") || (isNaN(campoTelefono.value))) {
         ev.preventDefault();
         Swal.fire(
@@ -76,8 +76,20 @@ const campoTelefono = document.getElementById("telefonoF");
             "Gracias " + campoNombre.value,
             "success");
     }
-} */
+}
 
 
 
-//oRDENAR PRODUCTOS
+//Sobre nosotros
+//API
+function iniciarMap() {
+    var coord = { lat: -34.5956145, lng: -58.4431949 };
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: coord
+    });
+    var marker = new google.maps.marker({
+        position: coord,
+        map: map
+    });
+}

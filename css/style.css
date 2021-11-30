@@ -199,6 +199,11 @@ h2 {
     font-size: 30px;
 }
 
+.botonEnviar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* Tabla */
 
@@ -262,4 +267,11 @@ td {
     text-align: center;
     color: #fff;
     background: #062323;
+}
+
+#map {
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width: 50%;
 }
